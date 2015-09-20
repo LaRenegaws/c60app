@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name=keywords value="c60, pebble, hackthenorth">
+
+		<title>C60</title>
+		
+		<!-- Bootstrap Core + Custom CSS-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link href="css/style.css" rel="stylesheet">
+
+    <!-- Logic -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script src="js/create.js"></script>
+		
+		<!-- Custom Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700' rel='stylesheet' type='text/css'>
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+    <div class="container">
+
+      <br><br>
+
+      <div class="row text-center">
+        <img src="img/c60web.png">
+      </div>
+
+      <br><br>
+
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <form>
+            <h1 class="text-center">Create an account</h1>
+
+            <div class="form-group">
+              <label for="nameinput">Name</label>
+              <input type="text" class="form-control" id="nameinput" placeholder="Name">
+            </div>
+
+            <div class="form-group">
+              <label for="pidinput">Pebble ID</label>
+              <input type="text" class="form-control" id="pidinput" placeholder="Pebble ID">
+            </div>
+
+            <div class="form-group">
+              <label for="userinput">Username</label>
+              <input type="text" class="form-control" id="userinput" placeholder="Username">
+            </div>
+
+            <div class="form-group">
+              <label for="passwordinput">Password</label>
+              <input type="password" class="form-control" id="passwordinput" placeholder="Password">
+            </div>
+
+            <div class="form-group">
+              <label for="emailinput">Email</label>
+              <input type="email" class="form-control" id="emailinput" placeholder="Email">
+            </div>
+
+            <div class="form-group">
+              <label for="phoneinput">Phone</label>
+              <input type="text" class="form-control" id="phoneinput" placeholder="Phone">
+            </div>
+
+            <br>
+
+            <button id="createbtn" type="button" class="btn btn-default btn-block" aria-label="Left Align">
+              Create
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name=keywords value="c60, pebble, hackthenorth">
+
+		<title>C60</title>
+		
+		<!-- Bootstrap Core + Custom CSS-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link href="css/style.css" rel="stylesheet">
+
+    <!-- Logic -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script src="js/details.js"></script>
+		
+		<!-- Custom Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700' rel='stylesheet' type='text/css'>
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+    <div class="container vcenter">
+
+      <div class="row text-center">
+        <img src="img/c60web.png">
+      </div>
+
+      <br>
+      <br>
+
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <form>
+            <h1 id="name-header" class="text-center"></h1>
+
+            <div class="form-group">
+              <label for="emailinput">Email</label>
+              <input type="email" value="" class="form-control" id="emailinput" disabled> 
+            </div>
+
+            <br>
+
+            <div class="form-group">
+              <label for="phoneinput">Phone Number</label>
+              <input type="text" value="" class="form-control" id="phoneinput" disabled>
+            </div>
+
+            <br>
+
+            <div class="row">
+              <div class="col-md-4">
+                <button id="editbtn" type="button" class="btn btn-primary btn-block active"> 
+                Edit
+                </button>
+              </div>
+
+              <div class="col-md-4">
+                <button id="savebtn" type="button" class="btn btn-primary btn-block" disabled="true">
+                Save
+                </button>
+              </div>
+
+              <div class="col-md-4">
+                <button id="logoutbtn" type="button" class="btn btn-danger btn-block">
+                Logout
+                </button>
+              </div>
+            </div>
+        
+          </form>
+        </div>
+      </div>
+    </div>
+	</body>
+</html>

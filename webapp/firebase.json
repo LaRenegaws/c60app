@@ -1,0 +1,9 @@
+{
+  "firebase": "c60app",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
