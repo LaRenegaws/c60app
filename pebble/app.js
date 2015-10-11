@@ -41,6 +41,7 @@ function locationError(err) {
 }
 
 // Radius algorithm 
+
 function radiusFinder(lat1, long1) {
   var latitude_other = lat1;
   var longitude_other = long1;
@@ -63,27 +64,9 @@ function radiusFinder(lat1, long1) {
   return d;
 }
 
-var contacts = [
-  {
-    title: 'Andrew Liang',
-    subtitle: 'liangdrew@gmail.com',
-    body: '647 216 3339'
-  }, {
-    title: 'Aman Dureja',
-    subtitle: 'dureja.aman.97@outlook.com',
-    body: '905 123 4446'
-  }, {
-    title: 'Paul Zhang',
-    subtitle: 'p97zhangisawastemanfordayslololololwaterloose2020@hotmail.com',
-    body: '905 323 4546',
-  }, {
-    title: 'Aditya Keerthi',
-    subtitle: 'akeerth@uwaterloo.ca',
-    body: '312 143 4476'
-  }
-];
+// App title screen
 
-var main = new UI.Card({  // app title screen
+var main = new UI.Card({  
   title: '     C60',
   icon: 'images/c60.png',
   subtitle: 'Welcome!',
@@ -111,7 +94,7 @@ main.on('click', 'select', function(e) {
         subtitle: 'My Pebble ID'
       }]
     }]
-  });  // closes menu
+  });
   
   menu.show();
 
@@ -125,6 +108,7 @@ main.on('click', 'select', function(e) {
           type: 'json'
         },
         function(data) {
+          
           // Success!
           
           var nearbyData = [];
@@ -147,7 +131,7 @@ main.on('click', 'select', function(e) {
                 sections: [{
                   items: nearbyData
                 }]
-              });  // closes menu
+              });
               
               nearby_menu.show();
               
@@ -189,7 +173,6 @@ main.on('click', 'select', function(e) {
       
       connections = [];
       
-      
       ajax(
         {
           url: 'https://c60app.firebaseio.com/users/' + Pebble.getAccountToken() + "/connections.json",
@@ -230,7 +213,7 @@ main.on('click', 'select', function(e) {
       );
       
 
-    }  // CLOSES IF
+    }
     
     else if (e.itemIndex === 2)  // Token
     {
@@ -238,14 +221,16 @@ main.on('click', 'select', function(e) {
       ({
         title: 'Pebble ID',
         body: Pebble.getAccountToken()
-      });  //  CLOSES VAR
+      });
+      
       token_card.show();
-    }  // CLOSES ELSE IF
-  });  // CLOSES MENU.ON
+    }
+  });
   
-});  // CLOSES MAIN.ON
+});
 
 function connectionCard(){
+  
   var contact_menu = new UI.Menu
   ({
     sections: 
@@ -265,9 +250,10 @@ function connectionCard(){
         subtitle: connections[e.itemIndex].subtitle,
         body: connections[e.itemIndex].body,
         scrollable: true
-    });  // CLOSES VAR
+    });
+    
     detail_card.show(); 
-  }); //  CLOSES CONTACT_MENU.ON
+  });
 }
 
 function snapshot(dataSnapshot){
@@ -314,6 +300,7 @@ function snapshot(dataSnapshot){
 
           notification_menu.on('select', function(e) {
             if (e.itemIndex === 1) {
+              
               // Add user to contacts (push to firebase)
               
               var connectionRef = usersRef.child(Pebble.getAccountToken()).child("connections");
@@ -334,6 +321,7 @@ function snapshot(dataSnapshot){
               menu.show();
             }
             else if (e.itemIndex === 2) {
+              
               // Decline request
               
               usersRef.child(Pebble.getAccountToken()).update({
